@@ -1,0 +1,8 @@
+flask
+pyserial
+numpy
+opencv-python
+pytesseract
+scikit-learn
+matplotlib
+pandas
