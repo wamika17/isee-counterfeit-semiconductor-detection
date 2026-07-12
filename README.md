@@ -29,13 +29,13 @@ This project proposes a low-cost embedded solution capable of performing prelimi
 
 ## Key Features
 
-- OCR-based IC marking verification
-- Electrical property analysis
-- Embedded hardware testing platform
-- Arduino Mega based data acquisition
-- Machine Learning based classification
+- Multi-modal counterfeit semiconductor detection
+- OCR-based IC package marking verification
+- Electrical truth table verification
+- Voltage characteristic analysis
+- Embedded Arduino Mega testing platform
+- Feature extraction for machine learning
 - Flask-based monitoring dashboard
-- Low-cost and portable architecture
 
 ---
 
@@ -121,17 +121,37 @@ isee-counterfeit-semiconductor-detection/
 
 ## Detection Methodology
 
+The detection system combines **optical verification** and **electrical characterization** to improve counterfeit detection accuracy.
+
 ### Stage 1 – Optical Verification
 
-The package markings printed on the integrated circuit are captured and processed using Optical Character Recognition (OCR). Extracted text is compared with expected manufacturer information to identify inconsistencies in device markings.
+The IC package is inspected using Optical Character Recognition (OCR). Manufacturer markings and part numbers are extracted and compared with expected information.
 
-### Stage 2 – Electrical Verification
+### Stage 2 – Electrical Characterization
 
-The IC is subjected to predefined logic inputs while electrical outputs are monitored. Voltage measurements and logic responses are analyzed to determine whether the observed behavior matches that of an authentic component.
+The Arduino Mega applies predefined logic input combinations to the IC under test.
 
-### Stage 3 – Machine Learning Classification
+The system measures:
 
-Features extracted from optical verification and electrical testing are combined and processed using a machine learning model to determine the authenticity of the semiconductor device.
+- Logic outputs
+- Input voltage
+- Output voltage
+
+The measured values are compared with the expected electrical behavior of a genuine component.
+
+### Stage 3 – Feature Extraction
+
+Information collected from OCR and electrical testing is converted into numerical features, including:
+
+- OCR confidence
+- Truth table accuracy
+- Average output voltage
+- Voltage deviation
+- Number of failed logic tests
+
+### Stage 4 – Machine Learning
+
+The extracted features are analyzed using a machine learning classifier to determine whether the IC is genuine or counterfeit.
 
 ---
 
