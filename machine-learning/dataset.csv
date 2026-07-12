@@ -1,0 +1,11 @@
+OCR_Confidence,Truth_Table_Accuracy,Average_Input_Voltage,Average_Output_Voltage,Voltage_Drop,Failed_Logic_Tests,Label
+99.2,100,5.00,4.98,0.02,0,Genuine
+98.5,100,5.01,4.99,0.02,0,Genuine
+97.8,100,5.00,4.97,0.03,0,Genuine
+96.4,75,5.00,4.21,0.79,1,Counterfeit
+94.7,50,5.02,3.98,1.04,2,Counterfeit
+93.5,25,5.00,3.65,1.35,3,Counterfeit
+99.0,100,4.99,4.98,0.01,0,Genuine
+98.7,100,5.01,4.99,0.02,0,Genuine
+95.2,75,5.00,4.30,0.70,1,Counterfeit
+92.6,50,5.00,3.90,1.10,2,Counterfeit
